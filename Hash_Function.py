@@ -53,7 +53,7 @@ def expand(text):
     # Number of characters needed to make up a 100 length hash
     characters_needed = characters = int(hashvaluesize/size)
     # Get an index for starting to access code dictionary items
-    codex_index = codex_start(size, text[0])
+    codex_index = codex_start(size, text[size-1])
     # Initialize the hashvalue to an empty string
     hashvalue = ""
     
