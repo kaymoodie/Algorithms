@@ -6,38 +6,31 @@ num_list = [90, 43, 55, 23, 98, 45, 76, 88, 59, 36, 47]
 print("Unsorted List")
 for num in num_list:
     print(num)
-    
+
 length = len(num_list)
-counter = length
-index_1 = 0
-index_2 = 1
-last_index = length - 1
-# i = 1 # Debugging assistant
-sorted_index = 0
+sorted_index = length
+#i = 0 # Debugging assistant
 
-while counter > 0:
-    # print(f"\nCheck # {i}") # Debugging assistant
-    if num_list[index_2] < num_list[index_1]:
-        # print(f"{num_list[index_2]} is smaller than {num_list[index_1]}!") # Debugging assistant
-        temp = num_list[index_1]
-        num_list[index_1] = num_list[index_2]
-        num_list[index_2] = temp
-      
-    
-    index_1 = index_2
-    index_2 += 1      
-    # i += 1 # Debugging assistant
+while sorted_index > 0:
+    #print(f"\nCheck # {i}") # Debugging assistant
+    for index in range(length-1):
+        if num_list[index] > num_list[index+1]:
+            #print(f"{num_list[index+1]} is smaller than {num_list[index]}!") # Debugging assistant
+            temp = num_list[index]
+            num_list[index] = num_list[index+1]
+            num_list[index+1] = temp
+        #else: #debugging tool
+            #print(f"{num_list[index+1]} is not smaller than {num_list[index]}!") # Debugging assistant
 
-    if index_2 == length:
-        counter -= 1
-        index_1 = 0
-        index_2 = 1
-       
+        #i += 1 # Debugging assistant
+    sorted_index -= 1
+    print(num_list)
+ 
 print("\nSorted List")
 for num in num_list:
     print(num)
 
-    
+print("\n")       
 
 # Python program for implementation of Bubble Sort
 
