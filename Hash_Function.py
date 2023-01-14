@@ -7,7 +7,7 @@ input_text1 = "I am Kanika Agimudie who recently returned to writing computer pr
 hashvaluesize = 100
 
 # Values use to create hash values
-code_dictionary = [2, 3, 1, 0, 3, 1, 1, 3, 2, 3, 1, 3, 0, 3, 2, 2, 3]
+code_dictionary = [2, 3, 1, 4, 3, 1, 1, 3, 2, 3, 1, 3, 4, 3, 2, 2, 3]
 # Length of the dictionary
 length_dictionary = len(code_dictionary)
 
@@ -53,7 +53,7 @@ def expand(text):
     # Number of characters needed to make up a 100 length hash
     characters_needed = characters = int(hashvaluesize/size)
     # Get an index for starting to access code dictionary items
-    codex_index = codex_start(size, text[0])
+    codex_index = codex_start(size, text[size-1])
     # Initialize the hashvalue to an empty string
     hashvalue = ""
     
@@ -170,10 +170,16 @@ def compress(text):
     return hashvalue
 
 # Testing
+#input_text = "Hello"
+#input_text1 = "Hello!"
 print(f"Input Text: {input_text} \n\tof length {len(input_text)}")
 print(f"{expand(input_text)}")
 print(f"\nInput Text: {input_text1}  \n\tof length {len(input_text1)}")
 print(f"{compress(input_text1)}")
+
+
+#text1 = "Kanika!"
+#text2 = "Kanika Agimudie"
 
 # To create hash, first check if the text 
 print(f"\nInput Text: {text1}  \n\tof length {len(text1)}")
@@ -187,4 +193,34 @@ if len(text2) > 100:
     print(compress(text2))
 else:
     print(expand(text2))
+
+
+text1 = "Kanika!"
+text2 = "Kanika Agimudie"
+input_text = "Hello"
+input_text1 = "Hello!"
+
+print(f"\nInput Text: {text1}  \n\tof length {len(text1)}")
+if len(text1) > 100:
+    print(compress(text1))
+else:
+    print(expand(text1))
+
+print(f"\nInput Text: {text2}  \n\tof length {len(text2)}")
+if len(text2) > 100:
+    print(compress(text2))
+else:
+    print(expand(text2))
+
+    print(f"\nInput Text: {input_text}  \n\tof length {len(input_text)}")
+if len(input_text) > 100:
+    print(compress(input_text))
+else:
+    print(expand(input_text))
+
+print(f"\nInput Text: {input_text1}  \n\tof length {len(input_text1)}")
+if len(input_text1) > 100:
+    print(compress(input_text1))
+else:
+    print(expand(input_text1))
 

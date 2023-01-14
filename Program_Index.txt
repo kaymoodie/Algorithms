@@ -1,0 +1,5 @@
+Bubble Sort; take a list of numbers and sort it using bubble sort algorithm
+
+Hash Function; takes a string of any length and returns a hash code of 100 characters.
+
+Selection Sort; take a list of numbers and sort it using selection sort algorithm 
